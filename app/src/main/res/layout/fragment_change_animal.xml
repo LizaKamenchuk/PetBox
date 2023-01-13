@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:background="@color/background"
+    tools:context=".CreateAnimalFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@color/background"
+        android:layout_height="55dp"
+        app:layout_collapseMode="pin"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/background"
+                android:src="@drawable/ic_arrow_left"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/filter_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/inriasans_light"
+                android:text="@string/edit"
+                android:textColor="@color/greyText"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/changeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/change"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:fontFamily="@font/inriasans_light"
+                android:textColor="@color/teal_200"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="110dp"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/logoxml"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_Appname1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inriasans_bolditalic"
+                android:text="Pet"
+                android:textColor="@color/crimeson"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+                app:layout_constraintHorizontal_bias="0.395"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_logo"
+                app:layout_constraintVertical_bias="0.909" />
+
+            <TextView
+                android:id="@+id/tv_Appname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inriasans_bolditalic"
+                android:text="Box"
+                android:textColor="@color/crimeson"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+                app:layout_constraintHorizontal_bias="0.605"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_logo"
+                app:layout_constraintVertical_bias="0.909" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo">
+
+                <ImageView
+                    android:id="@+id/photoAdded"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/background"
+                    android:onClick="onClick"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/addimg" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="@string/petsName"
+                    android:inputType="textCapWords" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/menu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/which_animal"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:textColorHint="@color/greyText">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/boy_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inriasans_light"
+                        android:hint="@string/boy"
+                        android:onClick="onClick"
+                        android:padding="10dp"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/girl_rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inriasans_light"
+                        android:hint="@string/girl"
+                        android:onClick="onClick"
+                        android:padding="10dp"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/inriasans_light"
+                        android:text="@string/age"
+                        android:textColor="@color/greyText"
+                        android:textSize="16sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/ageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/inriasans_light"
+                        android:text="0"
+                        android:textColor="@color/greyText"
+                        android:textSize="18sp"
+
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ageMenu"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:hint="..."
+                        android:textColorHint="@color/greyText">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/background"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/addButton"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:background="@color/lightseagreen"
+                        android:text="+" />
+
+                    <Button
+                        android:id="@+id/removeButton"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/lightseagreen"
+                        android:text="-" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/color"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:textColorHint="@color/greyText">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/background"
+                        android:inputType="none"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <EditText
+                    android:id="@+id/characterET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/inriasans_light"
+                    android:hint="@string/describe_the_animal"
+                    android:maxLength="345"
+                    android:padding="10dp"
+                    android:paddingBottom="25dp"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+                    android:fontFamily="@font/inriasans_light"
+                    android:textSize="16sp"
+                    android:layout_marginTop="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded"
+                    android:textColor="@color/greyText"
+                    android:backgroundTint="@color/wheat"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

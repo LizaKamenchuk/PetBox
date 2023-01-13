@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logoxml"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Appname1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inriasans_bolditalic"
+        android:text="Pet"
+        android:textColor="@color/crimeson"
+        android:textSize="31dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <TextView
+        android:id="@+id/tv_Appname2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inriasans_bolditalic"
+        android:text="Box"
+        android:textColor="@color/crimeson"
+        android:textSize="31dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+        app:layout_constraintHorizontal_bias="0.67"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_logo"
+        app:layout_constraintVertical_bias="0.909"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inriasans_lightitalic"
+        android:text="@string/glad_message"
+        android:textSize="14dp"
+        android:textColor="@color/lightseagreen"
+        android:lineSpacingExtra="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+
+        />
+    <EditText
+        android:id="@+id/shelter_name"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/shelterName"
+        android:inputType="textCapWords"
+        android:maxLength="25"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <EditText
+        android:id="@+id/city"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/city"
+        android:inputType="textCapWords"
+        android:maxLength="25"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shelter_name" />
+
+    <EditText
+        android:id="@+id/name"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/name"
+        android:inputType="textCapWords"
+        android:maxLength="25"
+        android:minHeight="48dp"
+       android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/city"/>
+
+    <EditText
+        android:id="@+id/lastname"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/lastname"
+        android:inputType="textCapWords"
+        android:maxLength="25"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:maxLength="25"
+        android:minHeight="48dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastname" />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <EditText
+        android:id="@+id/confirm_password"
+        style="@style/EnterText"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirnPassword"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password" />
+
+
+    <Button
+        android:id ="@+id/registerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        style="@style/Button1"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password"
+        android:onClick="register"
+        />
+    <TextView
+        android:id="@+id/wrong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:fontFamily="@font/inriasans_light"
+        android:textColor="@color/crimeson"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

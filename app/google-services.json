@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "428189792053",
+    "project_id": "petbox-3994a",
+    "storage_bucket": "petbox-3994a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428189792053:android:eb45f8fe86a60476e93e7c",
+        "android_client_info": {
+          "package_name": "com.example.petbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428189792053-iipm33r4ofiu2q4j0adeuvs2b2jhkohc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN-RvJst0PmF21vbNOvrKlf9FTCSIe1D4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428189792053-iipm33r4ofiu2q4j0adeuvs2b2jhkohc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tv"
+    android:layout_width="100dp"
+    android:layout_height="45dp"
+    android:text=""
+    android:textSize="18sp"
+    android:textColor="@color/greyText"
+    android:fontFamily="@font/inriasans_light"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    />

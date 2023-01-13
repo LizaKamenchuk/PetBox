@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PetBox" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/lightseagreen</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.PetBox.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="EnterText">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/inriasans_light</item>
+        <item name="android:textColor">@color/greyText</item>
+    </style>
+    <style name="Button1">
+        <item name="android:textColor">@color/wheat</item>
+        <item name="android:fontFamily">@font/inriasans_bolditalic</item>
+        <item name="android:backgroundTint">@color/lightseagreen</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="bulletinText">
+        <item name="android:textColor">@color/greyText</item>
+        <item name="android:fontFamily">@font/inriasans_lightitalic</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_enter"
+        android:orderInCategory="1"
+        android:title="@string/enter"
+    />
+    <item android:id="@+id/action_register"
+        android:orderInCategory="2"
+        android:title="@string/register"
+        />
+    <item android:id="@+id/action_exit"
+        android:orderInCategory="3"
+        android:title="@string/exit"/>
+
+</menu>
